@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>itineride — le planificateur d'itinéraires pour les voyages à moto</title>
+<meta name="description" content="itineride est le planificateur d'itinéraires pensé pour ceux qui voyagent à moto : posez les étapes, calculez chaque tronçon à part, emportez la distance, le temps de route et les notes de chaque journée. Sur téléphone et sur tablette. Aucun compte, aucun serveur.">
+<link rel="icon" href="assets/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="itineride — le planificateur d'itinéraires pour les voyages à moto">
+<meta property="og:description" content="Posez les étapes, calculez chaque tronçon à part, emportez la distance, le temps de route et les notes de chaque journée. Sur téléphone et sur tablette.">
+<meta property="og:image" content="assets/icon.png">
+<meta name="theme-color" content="#0D0C0E">
+
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="it" href="it.html">
+<link rel="alternate" hreflang="fr" href="fr.html">
+<link rel="alternate" hreflang="es" href="es.html">
+<link rel="alternate" hreflang="de" href="de.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
+
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body id="top">
+
+<!-- ══════════════════════════ top bar ══════════════════════════ -->
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/icon.png" alt=""> itineride</a>
+    <nav class="navlinks">
+      <a href="#how">Comment ça marche</a>
+      <a href="#features">Fonctions</a>
+      <a href="#devices">Téléphone et tablette</a>
+      <a href="#plans">Gratuit et premium</a>
+    </nav>
+
+    <details class="lang">
+      <summary title="Langue">
+        <svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
+        FR
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="lang__menu">
+        <a href="index.html?lang=en" hreflang="en">English <span>en</span></a>
+        <a href="it.html?lang=it" hreflang="it">Italiano <span>it</span></a>
+        <a href="fr.html?lang=fr" hreflang="fr" aria-current="page">Français <span>fr</span></a>
+        <a href="es.html?lang=es" hreflang="es">Español <span>es</span></a>
+        <a href="de.html?lang=de" hreflang="de">Deutsch <span>de</span></a>
+      </div>
+    </details>
+
+    <a class="play play--sm" href="https://play.google.com/store/apps/details?id=it.boschin.itineride&amp;hl=fr" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3.6 2.3A1.6 1.6 0 0 0 3 3.6v16.8c0 .53.2 1 .6 1.3l.1.08 9.4-9.4v-.22L3.6 2.3z" fill="#00A0FF"/>
+        <path d="M16.3 15.5l-3.2-3.1v-.23l3.2-3.15.08.05 3.72 2.12c1.06.6 1.06 1.6 0 2.2l-3.72 2.11-.08z" fill="#FFBC00"/>
+        <path d="M16.38 15.45L13.1 12.28l-9.5 9.5c.35.37.93.42 1.58.05l11.2-6.38" fill="#FF3A44"/>
+        <path d="M16.38 9.1L5.18 2.73c-.65-.37-1.23-.32-1.58.05l9.5 9.5 3.28-3.18z" fill="#00D26A"/>
+      </svg>
+      <span class="txt"><small>Disponible sur</small><strong>Google Play</strong></span>
+    </a>
+  </div>
+</header>
+
+<!-- ══════════════════════════ hero ══════════════════════════ -->
+<section class="hero">
+  <div class="hero__bg"><img src="assets/tablet-map.jpg" alt="" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">pour ceux qui voyagent à moto</span>
+      <h1>Le voyage prend forme <em>étape après étape.</em></h1>
+      <p class="lead">
+        itineride est le planificateur d'itinéraires pensé pour ceux qui roulent à moto. Touchez la
+        carte pour poser une étape, regardez le tracé se dessiner, et emportez la distance, le temps
+        de route et les notes de chaque journée — sur le téléphone dans votre poche et sur la
+        tablette posée sur la table.
+      </p>
+
+      <div class="cta">
+        <a class="play" href="https://play.google.com/store/apps/details?id=it.boschin.itineride&amp;hl=fr" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3.6 2.3A1.6 1.6 0 0 0 3 3.6v16.8c0 .53.2 1 .6 1.3l.1.08 9.4-9.4v-.22L3.6 2.3z" fill="#00A0FF"/>
+            <path d="M16.3 15.5l-3.2-3.1v-.23l3.2-3.15.08.05 3.72 2.12c1.06.6 1.06 1.6 0 2.2l-3.72 2.11-.08z" fill="#FFBC00"/>
+            <path d="M16.38 15.45L13.1 12.28l-9.5 9.5c.35.37.93.42 1.58.05l11.2-6.38" fill="#FF3A44"/>
+            <path d="M16.38 9.1L5.18 2.73c-.65-.37-1.23-.32-1.58.05l9.5 9.5 3.28-3.18z" fill="#00D26A"/>
+          </svg>
+          <span class="txt"><small>Disponible sur</small><strong>Google Play</strong></span>
+        </a>
+        <a class="ghost" href="#how">
+          Voir comment ça marche
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="chips">
+        <span class="chip"><b>Gratuit</b>, sans échéance</span>
+        <span class="chip">Aucun compte, <b>aucun serveur</b></span>
+        <span class="chip">km <b>ou</b> miles</span>
+        <span class="chip"><b>5</b> langues</span>
+      </div>
+    </div>
+
+    <div class="hero__device">
+      <div class="phone">
+        <img src="assets/phone-map.jpg" width="540" height="1212" alt="itineride sur un téléphone : un tracé à travers les Dolomites dessiné sur la carte, avec les étapes et les points d'intérêt marqués le long de la route.">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ how it works ══════════════════════════ -->
+<section class="band band--alt" id="how">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">comment ça marche</span>
+      <h2>Trois gestes, et l'itinéraire est prêt.</h2>
+      <p>Rien à configurer avant de commencer&nbsp;: ouvrez la carte, et la première touche est déjà une étape.</p>
+    </div>
+
+    <div class="stepsgrid">
+      <div class="reveal">
+
+        <div class="step">
+          <div class="step__rail">
+            <div class="step__pin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            </div>
+            <div class="step__line"></div>
+          </div>
+          <div class="step__body">
+            <h3>Posez les étapes</h3>
+            <p>
+              Touchez la carte, cherchez un lieu ou collez des coordonnées&nbsp;: chaque point
+              devient une étape. Choisissez entre aller simple et aller-retour — les deux sens
+              restent distincts, chacun avec ses étapes — et marquez cols, refuges et points de vue
+              comme points d'intérêt, sans dévier l'itinéraire pour les atteindre.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__rail">
+            <div class="step__pin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 20V9a3 3 0 0 1 3-3h6a3 3 0 0 0 3-3"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="3" r="2"/></svg>
+            </div>
+            <div class="step__line"></div>
+          </div>
+          <div class="step__body">
+            <h3>Calculez chaque tronçon à part</h3>
+            <p>
+              Chaque tronçon est calculé séparément et revient avec distance, durée, vitesse moyenne
+              et indications de changement de direction. Autoroutes et péages sont un interrupteur
+              que vous actionnez tronçon par tronçon — c'est ainsi que l'on choisit les belles
+              routes, et que la liaison ennuyeuse reste une liaison.
+            </p>
+            <div class="step__meta">
+              <span><i class="dot" style="background:#2F6BFF"></i> autoroute</span>
+              <span><i class="dot" style="background:#27C36B"></i> bretelle</span>
+              <span><i class="dot" style="background:#F5A623"></i> route principale</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__rail">
+            <div class="step__pin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4a1 1 0 0 1 1-1h11l-2 4 2 4H6"/></svg>
+            </div>
+            <div class="step__line"></div>
+          </div>
+          <div class="step__body">
+            <h3>Emportez-le avec vous</h3>
+            <p>
+              Le récapitulatif rassemble les totaux du voyage et les répartit jour par jour,
+              journées de repos comprises. Partagez l'itinéraire avec ceux qui partent avec vous,
+              exportez-le en GPX, ou confiez-le à Google Maps le matin du départ.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reveal">
+        <div class="phone">
+          <img loading="lazy" src="assets/phone-trip.png" width="540" height="1212" alt="La page du voyage : en haut les totaux de l'aller et du retour, puis la liste des étapes avec la distance et le temps entre chacune.">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ features ══════════════════════════ -->
+<section class="band" id="features">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">ce qu'il y a dedans</span>
+      <h2>Tout ce qu'un voyage demande. Rien de plus.</h2>
+      <p>Aucun fil d'actualité, aucun ami à ajouter, aucun nuage à synchroniser. Un planificateur qui s'ouvre vite et garde ce que vous avez écrit.</p>
+    </div>
+
+    <div class="grid3">
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m9 4 6 2.5L21 4v14l-6 2.5L9 18l-6 2.5V6.5z"/><path d="M9 4v14M15 6.5v14"/></svg></div>
+        <h3>Des étapes, d'où qu'elles viennent</h3>
+        <p>Une touche sur la carte, une recherche par nom, ou des coordonnées collées depuis un message de forum. Les trois finissent au même endroit&nbsp;: une étape sur votre tracé.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-4 4"/><path d="M21 7H8a4 4 0 0 0-4 4v1"/><path d="M7 21l-4-4 4-4"/><path d="M3 17h13a4 4 0 0 0 4-4v-1"/></svg></div>
+        <h3>Aller simple ou aller-retour</h3>
+        <p>Choisissez l'aller-retour et le retour devient un sens à lui seul, avec ses étapes et ses routes. Rentrer n'oblige jamais à refaire la route de l'aller.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4h14l-2.5 4L19 12H5"/><circle cx="5" cy="21" r="1.4"/></svg></div>
+        <h3>Points d'intérêt</h3>
+        <p>Un col, un refuge, un point de vue dont vous voulez vous souvenir&nbsp;: marquez-le le long de la route. Il apparaît sur la carte sans déplacer un mètre de tracé.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 8a4.1 4.1 0 0 1 7 2.6c0 5-7 9.4-7 9.4z"/></svg></div>
+        <h3>Favoris</h3>
+        <p>Les lieux où vous revenez restent à une touche, prêts à entrer dans le prochain voyage que vous commencez.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8M12 21V4M20 21v-9"/><circle cx="4" cy="5.5" r="1.6"/><circle cx="12" cy="16" r="1.6"/><circle cx="20" cy="9" r="1.6"/></svg></div>
+        <h3>Autoroutes et péages, tronçon par tronçon</h3>
+        <p>Deux interrupteurs sur chaque tronçon. Filez sur l'autoroute pour rejoindre la montagne, puis laissez les cols sans elle.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <h3>Jour par jour, journées de repos comprises</h3>
+        <p>Les totaux se répartissent sur les journées où vous roulerez vraiment&nbsp;: une semaine de voyage cesse d'être un seul long chiffre.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
+        <h3>GPX à l'entrée et à la sortie</h3>
+        <p>Exportez un tracé ou le voyage entier — notes, liens, types d'étape et journées de repos compris — et ouvrez le GPX que quelqu'un a partagé avec vous.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+        <h3>Tout reste sur l'appareil</h3>
+        <p>Une base locale&nbsp;: aucun compte, aucune inscription, aucun serveur à nous au milieu. Rien à supprimer ensuite, puisque rien n'a jamais été envoyé.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></div>
+        <h3>Vos unités, votre langue</h3>
+        <p>Kilomètres ou miles, et toute l'application — indications de direction et noms de lieux compris — en français, italien, anglais, espagnol ou allemand.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ phone + tablet ══════════════════════════ -->
+<section class="band band--alt" id="devices">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">téléphone et tablette</span>
+      <h2>Le même voyage, sur l'écran que vous avez sous la main.</h2>
+      <p>
+        La mise en page suit l'écran au lieu d'être étirée pour le remplir. Sur le téléphone, la
+        carte prend tout l'affichage et le voyage s'ouvre par-dessus. Sur une tablette, la liste et
+        les sens sont côte à côte&nbsp;: vous touchez une étape à gauche et vous voyez les totaux
+        changer à droite.
+      </p>
+    </div>
+
+    <div class="devices">
+      <div class="reveal">
+        <div class="tablet">
+          <img loading="lazy" src="assets/tablet-split.png" width="1120" height="700" alt="itineride sur une tablette : à gauche la liste des étapes, à droite l'aller et le retour avec leurs totaux.">
+        </div>
+        <p class="caption">Tablette — les étapes et leurs sens, côte à côte (ici en italien, l'une des cinq)</p>
+      </div>
+      <div class="reveal">
+        <div class="phone">
+          <img loading="lazy" src="assets/phone-legs.jpg" width="540" height="1212" alt="itineride sur un téléphone : le tronçon parcouru dessiné en couleur sur la carte, avec distance, durée et vitesse moyenne en bas.">
+        </div>
+        <p class="caption">Téléphone — un tronçon à la fois</p>
+      </div>
+    </div>
+
+    <div class="split2">
+      <div class="reveal">
+        <div class="tablet">
+          <img loading="lazy" src="assets/tablet-map.jpg" width="1120" height="700" alt="itineride sur une tablette : tout le tracé à travers les Dolomites sur une carte large, les barres d'outils rangées dans les coins.">
+        </div>
+        <p class="caption">Plus de carte, les mêmes commandes à portée</p>
+      </div>
+      <div class="reveal">
+        <div class="tablet">
+          <img loading="lazy" src="assets/tablet-position.jpg" width="1120" height="700" alt="Un lieu choisi sur la carte de la tablette, avec les options pour l'ajouter comme étape, l'enregistrer en favori ou le marquer comme point d'intérêt.">
+        </div>
+        <p class="caption">Chaque point de la carte est à une touche de devenir une étape</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ gallery ══════════════════════════ -->
+<section class="band" id="screens">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">écran par écran</span>
+      <h2>À quoi ça ressemble vraiment.</h2>
+      <p>De vraies captures, rien de reconstitué. Faites glisser.</p>
+    </div>
+  </div>
+
+  <div class="railwrap reveal">
+    <div class="rail">
+      <figure class="shot">
+        <div class="phone"><img loading="lazy" src="assets/phone-map.jpg" width="540" height="1212" alt="Le tracé dessiné sur la carte avec les étapes et les points d'intérêt."></div>
+        <figcaption>Le tracé sur la carte</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img loading="lazy" src="assets/phone-trip.png" width="540" height="1212" alt="La page du voyage avec les totaux et la liste des étapes."></div>
+        <figcaption>D'abord les totaux, puis chaque étape</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img loading="lazy" src="assets/phone-turns.png" width="540" height="1212" alt="Les indications de direction d'un tronçon, avec les interrupteurs autoroutes et péages."></div>
+        <figcaption>Virage par virage, tronçon par tronçon</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img loading="lazy" src="assets/phone-new.png" width="540" height="1212" alt="Le formulaire du nouveau voyage : nom, description, aller simple ou aller-retour, départ, destination et dates."></div>
+        <figcaption>Un nouveau voyage en un formulaire</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img loading="lazy" src="assets/phone-position.jpg" width="540" height="1212" alt="Un lieu touché sur la carte, avec les options pour l'ajouter comme étape, l'enregistrer en favori ou le marquer comme point d'intérêt."></div>
+        <figcaption>Touchez un lieu, décidez ensuite</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img loading="lazy" src="assets/phone-favs.jpg" width="540" height="1212" alt="La carte couverte de lieux enregistrés en favoris le long d'un long tracé."></div>
+        <figcaption>Des favoris, partout sur la carte</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img loading="lazy" src="assets/phone-settings.png" width="540" height="1212" alt="Les réglages : langue, unités en kilomètres ou en miles, lieu de départ habituel, confirmations et clé du service d'itinéraires."></div>
+        <figcaption>Langue et unités, à votre main</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ plans ══════════════════════════ -->
+<section class="band band--alt" id="plans">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <span class="eyebrow">gratuit et premium</span>
+      <h2>Gratuit sans échéance. Premium sans abonnement.</h2>
+      <p>L'application gratuite n'expire pas et ne demande jamais de carte. Le premium s'achète une fois, et c'est fini.</p>
+    </div>
+
+    <div class="plans">
+      <div class="plan plan--free reveal">
+        <span class="plan__tag">Gratuit</span>
+        <h3>De quoi planifier un voyage</h3>
+        <p class="plan__note">Sans échéance, sans compte, sans carte.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> Jusqu'à 2 voyages</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> 5 étapes par sens</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> 5 points d'intérêt par voyage</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> 10 lieux favoris</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> Calcul d'itinéraire complet, indications et récapitulatif jour par jour</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> Une bannière en bas des listes</li>
+        </ul>
+      </div>
+
+      <div class="plan plan--pro reveal">
+        <span class="plan__tag">Premium — achat unique</span>
+        <h3>Toutes les limites levées</h3>
+        <p class="plan__note">Acheté une fois. Sans abonnement, sans renouvellement.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> Voyages, étapes, points d'intérêt et favoris sans limite</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> Aucune publicité</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> Export GPX d'un tracé ou du voyage complet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> Import d'un fichier GPX partagé avec l'application</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> Ouverture de l'itinéraire dans Google Maps</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg> L'export du tracé et l'ouverture dans Google Maps peuvent être essayés une fois en regardant une vidéo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note reveal" style="margin-top:36px">
+      <h3>Avant de partir</h3>
+      <p>
+        itineride planifie, il ne navigue pas&nbsp;: sur la route, l'itinéraire est confié à Google
+        Maps. Les itinéraires sont calculés avec OpenRouteService, et au premier lancement
+        l'application demande votre clé personnelle pour ce service — elle est gratuite et s'obtient
+        en quelques minutes sur leur site. C'est aussi la raison pour laquelle aucun compte n'est
+        nécessaire ici&nbsp;: les calculs passent par votre clé, pas par nos serveurs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ final cta ══════════════════════════ -->
+<section class="final">
+  <div class="wrap reveal">
+    <img class="mark" src="assets/icon.png" alt="" width="76" height="76">
+    <h2>La prochaine saison commence par une carte.</h2>
+    <p>Ouvrez-la, posez la première étape, et voyez où la route veut aller.</p>
+    <a class="play" href="https://play.google.com/store/apps/details?id=it.boschin.itineride&amp;hl=fr" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3.6 2.3A1.6 1.6 0 0 0 3 3.6v16.8c0 .53.2 1 .6 1.3l.1.08 9.4-9.4v-.22L3.6 2.3z" fill="#00A0FF"/>
+        <path d="M16.3 15.5l-3.2-3.1v-.23l3.2-3.15.08.05 3.72 2.12c1.06.6 1.06 1.6 0 2.2l-3.72 2.11-.08z" fill="#FFBC00"/>
+        <path d="M16.38 15.45L13.1 12.28l-9.5 9.5c.35.37.93.42 1.58.05l11.2-6.38" fill="#FF3A44"/>
+        <path d="M16.38 9.1L5.18 2.73c-.65-.37-1.23-.32-1.58.05l9.5 9.5 3.28-3.18z" fill="#00D26A"/>
+      </svg>
+      <span class="txt"><small>Disponible sur</small><strong>Google Play</strong></span>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════ footer ══════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <span>© 2026 itineride</span>
+    <a href="privacy-policy.html" title="En anglais">Politique de confidentialité</a>
+    <a href="https://play.google.com/store/apps/details?id=it.boschin.itineride&amp;hl=fr" target="_blank" rel="noopener">Google Play</a>
+    <span class="spacer"></span>
+    <span class="langrow">
+      <a href="index.html?lang=en" hreflang="en">English</a><i>·</i>
+      <a href="it.html?lang=it" hreflang="it">Italiano</a><i>·</i>
+      <a href="fr.html?lang=fr" hreflang="fr" aria-current="page">Français</a><i>·</i>
+      <a href="es.html?lang=es" hreflang="es">Español</a><i>·</i>
+      <a href="de.html?lang=de" hreflang="de">Deutsch</a>
+    </span>
+  </div>
+  <div class="wrap">
+    <p class="legal">
+      Google Play et le logo Google Play sont des marques de Google LLC. Les données de carte et
+      d'itinéraire proviennent des contributeurs d'OpenStreetMap et d'OpenRouteService.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+
+</body>
+</html>
