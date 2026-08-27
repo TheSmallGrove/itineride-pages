@@ -76,3 +76,28 @@
     history.replaceState(null, '', location.pathname + location.hash);
   }
 })();
+
+// The storage notice. It asks for nothing: the language preference it describes
+// is exempt from consent under Article 5(3), so there is no Accept and no Reject
+// — only an acknowledgement, remembered so the bar does not come back. If storage
+// is blocked the bar simply returns next visit, which is the harmless failure.
+(function () {
+  var bar = document.getElementById('notice');
+  if (!bar) return;
+
+  var KEY = 'itineride.notice';
+
+  var seen = null;
+  try { seen = localStorage.getItem(KEY); } catch (e) {}
+  if (seen) return;
+
+  bar.hidden = false;
+
+  var ok = bar.querySelector('button');
+  if (!ok) return;
+
+  ok.addEventListener('click', function () {
+    bar.hidden = true;
+    try { localStorage.setItem(KEY, '1'); } catch (e) {}
+  });
+})();
