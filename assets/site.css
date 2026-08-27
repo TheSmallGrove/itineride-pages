@@ -277,7 +277,14 @@ p  { margin: 0; }
 
 footer { border-top: 1px solid var(--line-soft); padding: 34px 0 46px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; font-size: .87rem; color: var(--dim); }
-footer a { text-decoration: none; transition: color .2s; }
+/* The two real links of the footer are direct children of .wrap; the five
+   language links live inside .langrow and stay plain, or the row turns noisy. */
+footer a { text-decoration: none; transition: color .2s, border-color .2s; }
+footer .wrap > a {
+  color: var(--muted);
+  border-bottom: 1px solid rgba(255,255,255,.16);
+}
+footer .wrap > a:hover { color: var(--fg); border-bottom-color: rgba(255,255,255,.42); }
 footer a:hover { color: var(--fg); }
 footer .spacer { margin-left: auto; }
 .legal { font-size: .78rem; color: #5E5559; max-width: 66ch; margin-top: 18px; line-height: 1.55; }
@@ -336,3 +343,109 @@ footer .spacer { margin-left: auto; }
 .langrow a { text-decoration: none; }
 .langrow a[aria-current="page"] { color: var(--fg); }
 .langrow i { font-style: normal; opacity: .35; }
+
+/* ───────────────────────────── document page ───────────────────────────── */
+
+/* Long-form legal text: the privacy policy. Same palette, type and header as
+   the rest of the site, but a much narrower measure — this page is read line by
+   line, not scanned, and the 1160px of .wrap would be unreadable for prose. */
+
+.doc {
+  max-width: 46rem; margin: 0 auto;
+  padding: clamp(40px, 6vw, 76px) 24px 90px;
+}
+
+.doc h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 .35rem; }
+.doc h2 { font-size: 1.32rem; margin: 2.7rem 0 .7rem; }
+.doc h3 { font-size: 1.03rem; margin: 2rem 0 .5rem; color: var(--crimson-lt); }
+
+.doc p  { margin: 0 0 1rem; color: var(--muted); line-height: 1.72; }
+.doc strong { color: var(--fg); font-weight: 600; }
+
+.doc a {
+  color: var(--crimson-lt); text-decoration: none;
+  border-bottom: 1px solid rgba(224,96,124,.35);
+  transition: border-color .2s;
+}
+.doc a:hover { border-bottom-color: var(--crimson-lt); }
+
+.doc ul { margin: 0 0 1.15rem; padding-left: 1.2rem; }
+.doc li { margin-bottom: .5rem; color: var(--muted); line-height: 1.66; }
+.doc li::marker { color: var(--crimson-lt); }
+
+.doc .updated { margin: 0 0 1.7rem; font-size: .9rem; color: var(--dim); }
+.doc .updated strong { color: var(--dim); font-weight: 600; }
+
+.doc .controller {
+  margin: 0 0 2.3rem; padding: .95rem 1.15rem;
+  border-left: 3px solid var(--crimson); border-radius: 4px;
+  background: rgba(154,36,72,.09);
+  font-size: .95rem; color: #C0B4B8;
+}
+
+.doc table { width: 100%; border-collapse: collapse; margin: .9rem 0 1.5rem; font-size: .93rem; }
+.doc th, .doc td { text-align: left; padding: .62rem .7rem; vertical-align: top; border-bottom: 1px solid var(--line-soft); }
+.doc th { color: var(--fg); font-weight: 600; font-size: .78rem; letter-spacing: .07em; text-transform: uppercase; }
+.doc td { color: var(--muted); }
+.doc tr:last-child td { border-bottom: 0; }
+
+/* The two language halves of the document, and the line between them. */
+.doc .lang-divider { margin: 4.6rem 0 3rem; border: 0; border-top: 1px solid var(--line); }
+
+.doc footer {
+  margin-top: 3.6rem; padding: 1.15rem 0 0;
+  border-top: 1px solid var(--line-soft);
+  color: var(--dim); font-size: .87rem;
+}
+
+/* On the document page the bar carries only the logo, so it lines up with the
+   text column instead of sitting at the far page margin. */
+.topbar--doc .wrap { max-width: 46rem; }
+
+.doc code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .88em; color: var(--crimson-lt);
+  background: rgba(154,36,72,.14); padding: .1em .4em; border-radius: 4px;
+}
+
+/* ───────────────────────────── storage notice ───────────────────────────── */
+
+/* Not a consent gate. The only thing this site keeps is a language the visitor
+   chose, which Article 5(3) exempts from consent — so the bar informs, links to
+   the detail, and one click retires it for good. Asking for a consent that is
+   not owed would be friction, not compliance. */
+
+.notice[hidden] { display: none; }
+
+.notice {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
+  background: rgba(20,18,22,.97);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -18px 44px -22px rgba(0,0,0,.9);
+  animation: notice-in .45s cubic-bezier(.22,.8,.3,1);
+}
+
+.notice__in {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 15px 24px 17px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px;
+}
+
+.notice p { margin: 0; flex: 1 1 28rem; font-size: .88rem; line-height: 1.6; color: var(--muted); }
+.notice a { color: var(--crimson-lt); text-decoration: none; border-bottom: 1px solid rgba(224,96,124,.35); }
+.notice a:hover { border-bottom-color: var(--crimson-lt); }
+
+.notice button {
+  flex: none; cursor: pointer;
+  font: inherit; font-size: .88rem; font-weight: 600;
+  padding: 9px 22px; border-radius: 10px;
+  border: 1px solid rgba(224,96,124,.45);
+  background: rgba(154,36,72,.32); color: var(--fg);
+  transition: background .2s, border-color .2s;
+}
+.notice button:hover { background: rgba(154,36,72,.55); border-color: var(--crimson-lt); }
+.notice button:focus-visible { outline: 2px solid var(--crimson-lt); outline-offset: 2px; }
+
+@keyframes notice-in { from { transform: translateY(100%); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .notice { animation: none; } }
