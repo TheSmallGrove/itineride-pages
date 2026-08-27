@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>itineride — Privacy Policy</title>
+<meta name="description" content="Privacy policy of the itineride app: what stays on your device, what leaves it, and to whom.">
+<style>
+  :root {
+    --accent: #7B1E2B;
+    --header: #2B2B2B;
+    --text: #1F1F1F;
+    --muted: #5F5F5F;
+    --rule: #E4E4E4;
+    --surface: #FFFFFF;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #C46374;
+      --header: #E8E8E8;
+      --text: #E8E8E8;
+      --muted: #A8A8A8;
+      --rule: #333333;
+      --surface: #161616;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--surface);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  main { max-width: 44rem; margin: 0 auto; }
+
+  h1 {
+    margin: 0 0 .25rem;
+    font-size: 1.75rem;
+    color: var(--header);
+  }
+
+  h2 {
+    margin: 2.25rem 0 .5rem;
+    font-size: 1.15rem;
+    color: var(--header);
+  }
+
+  h3 {
+    margin: 1.75rem 0 .4rem;
+    font-size: 1rem;
+    color: var(--header);
+  }
+
+  .updated { margin: 0 0 1.5rem; color: var(--muted); font-size: .9rem; }
+
+  .controller {
+    margin: 0 0 2rem;
+    padding: .85rem 1rem;
+    border-left: 3px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
+    font-size: .95rem;
+  }
+
+  a { color: var(--accent); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: .75rem 0 1rem;
+    font-size: .95rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: .5rem .6rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  th { color: var(--muted); font-weight: 600; }
+
+  ul { padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+
+  .lang-divider {
+    margin: 3.5rem 0 2.5rem;
+    border: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>itineride — Privacy Policy</h1>
+  <p class="updated"><strong>Last updated: August 26, 2026</strong></p>
+
+  <p class="controller">
+    <strong>Data Controller:</strong> Andrea Boschin —
+    <a href="mailto:itineride@boschin.it">itineride@boschin.it</a>
+  </p>
+
+  <h2>In short</h2>
+  <p>
+    itineride does not require you to create an account or sign in, and it does not use
+    its own server to store your data. Trips, stops, points of interest, favorite places,
+    notes, and other information you enter in the app remain on your device.
+  </p>
+  <p>
+    The developer does not receive this data and does not use its own analytics,
+    tracking, or profiling services.
+  </p>
+  <p>
+    Some features do, however, require communication with external services, for example
+    to calculate a route, display the map, open an itinerary in Google Maps, identify a
+    location shared with the app from another app, manage the purchase of the premium
+    version, or show advertising in the free version.
+  </p>
+  <p>
+    When this happens, only the data needed to provide the requested feature is
+    transmitted, as described below.
+  </p>
+
+  <h2>What stays on your device</h2>
+  <table>
+    <tr><th>Data</th><th>Where it is stored</th></tr>
+    <tr><td>Trips, stops, points of interest, favorite places, notes, and links entered in the app</td><td>Local SQLite database</td></tr>
+    <tr><td>Language, units of measurement, home location, and map preferences</td><td>Local app preferences</td></tr>
+    <tr><td>Your personal openrouteservice API key</td><td>Local app preferences</td></tr>
+    <tr><td>Premium unlock status</td><td>Local app preferences</td></tr>
+  </table>
+  <p>
+    The developer does not keep a copy of this data on their own servers.
+  </p>
+  <p>
+    Uninstalling itineride removes the copy of the app data stored on your device. If
+    Android backup is enabled, however, the operating system may include some app data in
+    the backup associated with your Google account. That copy is managed by Google under
+    its own terms, and the developer of itineride does not have access to it.
+  </p>
+
+  <h2>Data shared with external services</h2>
+
+  <h3>openrouteservice</h3>
+  <p>
+    itineride uses <strong>openrouteservice</strong>, operated by HeiGIT gGmbH, to
+    calculate routes and search for places.
+  </p>
+  <p>
+    When you use these features, itineride sends openrouteservice the information needed
+    to process your request, such as:
+  </p>
+  <ul>
+    <li>the coordinates of route stops;</li>
+    <li>the text you enter when searching for a place;</li>
+    <li>your current location, if you choose a feature that uses it as a starting point;</li>
+    <li>the coordinates of a location shared with itineride from another app, in order to
+      determine its name and address.</li>
+  </ul>
+  <p>
+    Requests are made by the app using your personal openrouteservice API key, which is
+    stored on your device and is not sent to the developer of itineride.
+  </p>
+  <p>
+    Your use of openrouteservice is subject to that service's terms and privacy policy.
+  </p>
+
+  <h3>OpenStreetMap</h3>
+  <p>
+    itineride uses <strong>OpenStreetMap</strong> servers to load the map tiles displayed
+    in the app.
+  </p>
+  <p>
+    As with any normal request made over the Internet, the servers may receive your
+    device's IP address and information about the map tiles being requested. Those tiles
+    correspond, approximately, to the geographic area currently visible on the map.
+  </p>
+  <p>
+    The terms and usage policies of the OpenStreetMap Foundation apply.
+  </p>
+
+  <h3>Google Maps</h3>
+  <p>
+    <strong>Google Maps</strong> is involved when you explicitly choose to open an
+    itinerary in a navigation app.
+  </p>
+  <p>
+    At that point, itineride creates a link containing the necessary stops and asks the
+    device to open it in Google Maps or another compatible app.
+  </p>
+  <p>
+    From that point onward, any processing carried out by Google is governed by Google's
+    terms and privacy policy.
+  </p>
+  <p>
+    Google's servers may also be contacted when you share with itineride a link generated
+    by Google Maps, as described in the following section.
+  </p>
+
+  <h3>Content shared with itineride from other apps</h3>
+  <p>
+    itineride can receive a location shared from another app, for example a link to a map
+    or an address in geo: format.
+  </p>
+  <p>
+    Where the shared text does not already contain the coordinates of the location, as is
+    the case with shortened links, the app requests the link in order to follow it to its
+    final address, which is the only one that carries those coordinates. That request is
+    made to the server hosting the link, which is generally Google for links generated by
+    Google Maps. As with any normal request made over the Internet, that server may
+    receive your device's IP address and the identifier contained in the link.
+  </p>
+  <p>
+    Once the coordinates have been obtained, they are sent to openrouteservice in order to
+    determine the name and address of the corresponding location.
+  </p>
+  <p>
+    These requests are made only when you share content with itineride and only to the
+    extent necessary to identify the location you have shared.
+  </p>
+
+  <h3>Google Play</h3>
+  <p>
+    Purchases of the premium version are handled by <strong>Google Play</strong>.
+  </p>
+  <p>
+    The developer of itineride does not receive your card details or other payment
+    information. Google Play processes the transaction and keeps the purchase associated
+    with your Google account.
+  </p>
+  <p>
+    The app only stores locally the information needed to determine whether premium
+    features have been unlocked.
+  </p>
+
+  <h3>Google AdMob</h3>
+  <p>
+    The free version of itineride uses <strong>Google AdMob</strong> to display
+    advertising.
+  </p>
+  <p>
+    To serve and measure ads, the Google Mobile Ads SDK may collect and send Google
+    information such as:
+  </p>
+  <ul>
+    <li>IP address;</li>
+    <li>device, app, or account identifiers, including the advertising ID when available;</li>
+    <li>technical and diagnostic information about the device, app, and SDK;</li>
+    <li>information about interactions with the app and with ads, such as app launches,
+      taps, and video views.</li>
+  </ul>
+  <p>
+    Google may use this information to serve and measure advertising, perform analytics
+    related to its advertising services, and prevent fraud and abuse.
+  </p>
+  <p>
+    <strong>itineride does not send AdMob your trips, route stops, notes, favorite
+    places, or the text of searches made through the app's features.</strong>
+  </p>
+  <p>
+    Some identifiers, including the Android advertising ID, may not be transmitted in
+    certain configurations or advertising modes.
+  </p>
+  <p>
+    For more information, please refer to Google's privacy policy and documentation.
+  </p>
+
+  <h2>Advertising</h2>
+  <p>
+    The free version of itineride displays a banner in some screens and may offer
+    optional rewarded video ads.
+  </p>
+  <p>
+    You may choose to watch one of these videos to unlock a single GPX export or a single
+    opening of an itinerary in Google Maps.
+  </p>
+  <p>
+    The premium version does not display AdMob advertising.
+  </p>
+  <p>
+    In countries or territories where required by law, including the European Economic
+    Area, the United Kingdom, and Switzerland, itineride presents consent options before
+    advertising-related processing for which consent is required.
+  </p>
+  <p>
+    Depending on your choices and on the available advertising modes, Google may serve
+    personalized ads, non-personalized ads, or limited ads.
+  </p>
+  <p>
+    Non-personalized ads are not selected based on your previous activity in order to
+    build an advertising profile, but they may still use contextual information and,
+    where permitted, device identifiers for purposes such as frequency capping and
+    aggregated reporting.
+  </p>
+  <p>
+    Limited ads apply additional restrictions to the use of data and identifiers. Some
+    technical information, such as the IP address needed to deliver an ad to your device,
+    may still be processed.
+  </p>
+  <p>
+    Where these consent options apply, you can review your advertising choices at any
+    time under <strong>Settings → Advertising → Ad choices</strong> in itineride. Once
+    consent has been requested, that entry remains available, including in the premium
+    version; where consent is not required it is not shown.
+  </p>
+  <p>
+    The advertising ID is also managed by Android and can be reset or deleted through
+    your device's privacy settings.
+  </p>
+  <p>
+    For more information about how Google processes data, please refer to Google's
+    privacy policy and its information about data collected from apps and sites that use
+    Google services.
+  </p>
+
+  <h2>Location</h2>
+  <p>
+    itineride may ask for permission to access your device's location.
+  </p>
+  <p>
+    Location is used to:
+  </p>
+  <ul>
+    <li>center the map on your current position;</li>
+    <li>create routes that start from your current position;</li>
+    <li>create exports that use your current position as the starting point.</li>
+  </ul>
+  <p>
+    Your location is initially used on the device.
+  </p>
+  <p>
+    If you ask itineride to calculate a route starting from your current location, the
+    relevant coordinates are sent to openrouteservice as part of the route request.
+  </p>
+  <p>
+    Simply moving the map to your current location also causes the corresponding map
+    tiles to be loaded from OpenStreetMap. As described above, their servers may
+    therefore be able to infer the approximate map area being viewed.
+  </p>
+  <p>
+    The developer of itineride does not receive or store your location on their own
+    servers.
+  </p>
+  <p>
+    If you deny location permission, the other features of the app remain available; only
+    features that require your current location will be unavailable.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    itineride is not specifically designed as a service for children.
+  </p>
+  <p>
+    The developer does not operate user accounts or store on their own servers the data
+    entered into the app.
+  </p>
+  <p>
+    In the free version, advertising is provided by Google AdMob according to the app's
+    configuration, the privacy choices made by the user, and the terms applicable to the
+    service.
+  </p>
+
+  <h2>Deleting your data</h2>
+  <p>
+    Data managed directly by itineride is stored on your device and can be deleted
+    without contacting the developer.
+  </p>
+  <p>
+    You can:
+  </p>
+  <ul>
+    <li><strong>uninstall the app</strong>, which removes itineride's local data from
+      your device;</li>
+    <li>use <strong>Android Settings → Apps → itineride → Storage → Clear data</strong>
+      to remove local data while keeping the app installed;</li>
+    <li>manage or delete the <strong>advertising ID</strong> through Android's privacy
+      settings.</li>
+  </ul>
+  <p>
+    If you use Android backup, a copy of some data may remain in the backup associated
+    with your Google account and is managed directly by Google.
+  </p>
+  <p>
+    The premium unlock is also associated with your Google Play account and may be
+    restored after reinstalling the app.
+  </p>
+  <p>
+    Data processed by the external services described in this policy is subject to their
+    own retention rules and deletion procedures.
+  </p>
+
+  <h2>Legal basis</h2>
+  <p>
+    Where European data protection law applies, the processing described in this policy
+    may rely, depending on the circumstances, on the following legal bases:
+  </p>
+  <ul>
+    <li><strong>consent</strong> — Article 6(1)(a) GDPR — for advertising-related
+      processing where consent is required by law; you can change or withdraw your
+      choices at any time under <strong>Settings → Advertising → Ad choices</strong>;</li>
+    <li><strong>performance of the requested service</strong> — Article 6(1)(b) GDPR —
+      when you use a feature that requires, for example, sending coordinates or search
+      terms to openrouteservice, loading OpenStreetMap tiles, or processing a purchase
+      through Google Play;</li>
+    <li><strong>legitimate interests</strong> — Article 6(1)(f) GDPR — where applicable,
+      for purposes such as security, fraud and abuse prevention, and the proper operation
+      of services.</li>
+  </ul>
+  <p>
+    The external services listed in this policy may also process data as independent
+    controllers and on the legal bases described in their own privacy policies.
+  </p>
+
+  <h2>Your rights</h2>
+  <p>
+    itineride does not use user accounts, and the developer does not store on their own
+    servers a copy of your trips, stops, notes, favorite places, or other information
+    saved locally in the app.
+  </p>
+  <p>
+    For this reason, for much of the data used by itineride there is no personal record
+    held by the developer that can be accessed, corrected, exported, or deleted on your
+    behalf: that data can be managed directly on your device.
+  </p>
+  <p>
+    Where European data protection law applies, the rights provided under Articles 15 to
+    22 GDPR remain applicable where relevant, including:
+  </p>
+  <ul>
+    <li>access;</li>
+    <li>rectification;</li>
+    <li>erasure;</li>
+    <li>restriction of processing;</li>
+    <li>data portability;</li>
+    <li>objection.</li>
+  </ul>
+  <p>
+    Where processing is based on consent, you may also withdraw that consent at any time.
+    Withdrawal does not affect the lawfulness of processing carried out before consent
+    was withdrawn.
+  </p>
+  <p>
+    For any request concerning processing carried out in connection with itineride, you
+    can contact
+    <strong><a href="mailto:itineride@boschin.it">itineride@boschin.it</a></strong>.
+  </p>
+  <p>
+    For data processed directly by the external services listed above — including
+    openrouteservice, OpenStreetMap, and Google — please refer to their respective
+    privacy policies and, where necessary, contact the relevant provider directly.
+  </p>
+  <p>
+    You also have the right to lodge a complaint with a supervisory authority. In Italy,
+    the competent authority is the <strong>Garante per la protezione dei dati
+    personali</strong>; you may also contact the authority responsible in the country
+    where you live or work.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    Any changes to this privacy policy will be published on this page together with an
+    updated revision date.
+  </p>
+  <p>
+    The version of this policy in force at any given time is always available on this
+    page, whose address is indicated in the app's listing on Google Play. You are
+    encouraged to consult it periodically.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    <strong>Andrea Boschin</strong><br>
+    <strong><a href="mailto:itineride@boschin.it">itineride@boschin.it</a></strong>
+  </p>
+
+  <hr class="lang-divider">
+
+  <section lang="it">
+    <h1>itineride — Informativa sulla privacy</h1>
+    <p class="updated"><strong>Ultimo aggiornamento: 26 agosto 2026</strong></p>
+
+    <p class="controller">
+      <strong>Titolare del trattamento:</strong> Andrea Boschin —
+      <a href="mailto:itineride@boschin.it">itineride@boschin.it</a>
+    </p>
+
+    <h2>In breve</h2>
+    <p>
+      itineride non richiede un account o un accesso e non utilizza un proprio server per
+      conservare i tuoi dati. I viaggi, le tappe, i punti di interesse, i luoghi
+      preferiti, le note e le altre informazioni che inserisci nell'app restano sul tuo
+      dispositivo.
+    </p>
+    <p>
+      Lo sviluppatore non riceve questi dati e non utilizza propri servizi di analytics,
+      tracciamento o profilazione.
+    </p>
+    <p>
+      Alcune funzioni, tuttavia, richiedono di comunicare con servizi esterni: ad esempio
+      per calcolare un percorso, mostrare la mappa, aprire un itinerario in Google Maps,
+      individuare un luogo condiviso con l'app da un'altra applicazione, gestire
+      l'acquisto della versione premium o mostrare pubblicità nella versione gratuita.
+    </p>
+    <p>
+      Quando accade, vengono trasmessi soltanto i dati necessari al funzionamento della
+      funzione richiesta, secondo quanto descritto di seguito.
+    </p>
+
+    <h2>Cosa resta sul dispositivo</h2>
+    <table>
+      <tr><th>Dato</th><th>Dove viene conservato</th></tr>
+      <tr><td>Viaggi, tappe, punti di interesse, luoghi preferiti, note e link inseriti nell'app</td><td>Database SQLite locale</td></tr>
+      <tr><td>Lingua, unità di misura, posizione di casa e preferenze della mappa</td><td>Preferenze locali dell'app</td></tr>
+      <tr><td>Chiave API personale di openrouteservice</td><td>Preferenze locali dell'app</td></tr>
+      <tr><td>Stato di sblocco della versione premium</td><td>Preferenze locali dell'app</td></tr>
+    </table>
+    <p>
+      Lo sviluppatore non conserva una copia di questi dati sui propri server.
+    </p>
+    <p>
+      Disinstallando itineride viene eliminata la copia dei dati conservata dall'app sul
+      dispositivo. Se è attivo il backup di Android, il sistema operativo può tuttavia
+      includere alcuni dati dell'app nel backup associato al tuo account Google. Tale
+      copia è gestita da Google secondo le proprie condizioni e lo sviluppatore di
+      itineride non vi ha accesso.
+    </p>
+
+    <h2>Dati comunicati a servizi esterni</h2>
+
+    <h3>openrouteservice</h3>
+    <p>
+      itineride utilizza <strong>openrouteservice</strong>, gestito da HeiGIT gGmbH, per
+      il calcolo dei percorsi e la ricerca dei luoghi.
+    </p>
+    <p>
+      Quando utilizzi queste funzioni, vengono inviate a openrouteservice le informazioni
+      necessarie a elaborare la richiesta, come:
+    </p>
+    <ul>
+      <li>le coordinate delle tappe del percorso;</li>
+      <li>il testo digitato durante la ricerca di un luogo;</li>
+      <li>la posizione corrente, se hai scelto una funzione che la utilizza come punto di
+        partenza;</li>
+      <li>le coordinate di un luogo condiviso con itineride da un'altra applicazione, per
+        determinarne il nome e l'indirizzo.</li>
+    </ul>
+    <p>
+      Le richieste vengono effettuate dall'app utilizzando la tua chiave API personale di
+      openrouteservice, che viene conservata sul dispositivo e non viene trasmessa allo
+      sviluppatore di itineride.
+    </p>
+    <p>
+      L'utilizzo di openrouteservice è soggetto ai termini e all'informativa sulla privacy
+      del servizio.
+    </p>
+
+    <h3>OpenStreetMap</h3>
+    <p>
+      itineride utilizza i server di <strong>OpenStreetMap</strong> per caricare le
+      porzioni di mappa visualizzate nell'app.
+    </p>
+    <p>
+      Come per una normale richiesta effettuata via Internet, i server possono ricevere
+      l'indirizzo IP del dispositivo e informazioni sulle tessere cartografiche richieste.
+      Queste ultime corrispondono, in modo approssimativo, all'area della mappa che stai
+      visualizzando.
+    </p>
+    <p>
+      Si applicano le condizioni e le politiche di utilizzo di OpenStreetMap Foundation.
+    </p>
+
+    <h3>Google Maps</h3>
+    <p>
+      <strong>Google Maps</strong> viene coinvolto quando scegli esplicitamente di aprire
+      un itinerario nel navigatore.
+    </p>
+    <p>
+      In quel momento itineride crea un collegamento contenente le tappe necessarie e
+      chiede al dispositivo di aprirlo in Google Maps o in un'altra applicazione
+      compatibile.
+    </p>
+    <p>
+      Da quel momento, il trattamento dei dati da parte di Google è regolato dalle
+      condizioni e dall'informativa sulla privacy di Google.
+    </p>
+    <p>
+      I server di Google possono inoltre essere contattati quando condividi con itineride
+      un collegamento generato da Google Maps, secondo quanto descritto nella sezione
+      seguente.
+    </p>
+
+    <h3>Contenuti condivisi con itineride da altre applicazioni</h3>
+    <p>
+      itineride può ricevere una posizione condivisa da un'altra applicazione, ad esempio
+      un collegamento a una mappa o un indirizzo in formato geo:.
+    </p>
+    <p>
+      Quando il testo condiviso non contiene già le coordinate del luogo, come avviene con
+      i collegamenti accorciati, l'app richiede il collegamento per seguirlo fino
+      all'indirizzo finale, che è l'unico a contenerle. Tale richiesta viene effettuata al
+      server che ospita il collegamento, generalmente Google per i collegamenti generati
+      da Google Maps. Come per una normale richiesta effettuata via Internet, quel server
+      può ricevere l'indirizzo IP del dispositivo e l'identificativo contenuto nel
+      collegamento.
+    </p>
+    <p>
+      Ottenute le coordinate, queste vengono inviate a openrouteservice per determinare il
+      nome e l'indirizzo del luogo corrispondente.
+    </p>
+    <p>
+      Tali richieste vengono effettuate soltanto quando condividi un contenuto con
+      itineride e nei soli limiti necessari a individuare il luogo che hai condiviso.
+    </p>
+
+    <h3>Google Play</h3>
+    <p>
+      Gli acquisti della versione premium sono gestiti da <strong>Google Play</strong>.
+    </p>
+    <p>
+      Lo sviluppatore di itineride non riceve i dati della tua carta o altri dati di
+      pagamento. Google Play gestisce la transazione e mantiene l'associazione
+      dell'acquisto con il tuo account Google.
+    </p>
+    <p>
+      L'app conserva localmente soltanto l'informazione necessaria a sapere se le
+      funzionalità premium sono state sbloccate.
+    </p>
+
+    <h3>Google AdMob</h3>
+    <p>
+      La versione gratuita di itineride utilizza <strong>Google AdMob</strong> per
+      mostrare pubblicità.
+    </p>
+    <p>
+      Per fornire e misurare gli annunci, il Google Mobile Ads SDK può raccogliere e
+      trasmettere a Google informazioni quali:
+    </p>
+    <ul>
+      <li>indirizzo IP;</li>
+      <li>identificativi del dispositivo, dell'app o dell'account, compreso
+        l'identificativo pubblicitario quando disponibile;</li>
+      <li>informazioni tecniche e diagnostiche sul dispositivo, sull'app e sull'SDK;</li>
+      <li>informazioni sulle interazioni con l'app e con gli annunci, come avvii dell'app,
+        tocchi e visualizzazioni di video.</li>
+    </ul>
+    <p>
+      Google può utilizzare queste informazioni per fornire e misurare la pubblicità,
+      effettuare analisi relative al servizio pubblicitario e prevenire frodi e abusi.
+    </p>
+    <p>
+      <strong>itineride non comunica ad AdMob i tuoi viaggi, le tappe dei tuoi percorsi,
+      le note, i luoghi preferiti o il testo delle ricerche effettuate tramite le funzioni
+      dell'app.</strong>
+    </p>
+    <p>
+      Alcuni identificativi, incluso l'identificativo pubblicitario di Android, possono
+      non essere trasmessi in determinate configurazioni o modalità pubblicitarie.
+    </p>
+    <p>
+      Maggiori informazioni sono disponibili nell'informativa sulla privacy e nella
+      documentazione di Google.
+    </p>
+
+    <h2>Pubblicità</h2>
+    <p>
+      La versione gratuita di itineride mostra un banner in alcune schermate e può offrire
+      video pubblicitari facoltativi.
+    </p>
+    <p>
+      Puoi scegliere di guardare uno di questi video per sbloccare una singola
+      esportazione GPX o una singola apertura di un itinerario in Google Maps.
+    </p>
+    <p>
+      La versione premium non mostra pubblicità AdMob.
+    </p>
+    <p>
+      Negli Stati o territori in cui la normativa lo richiede, tra cui lo Spazio economico
+      europeo, il Regno Unito e la Svizzera, itineride presenta le opzioni relative al
+      consenso prima dei trattamenti pubblicitari per i quali tale consenso è necessario.
+    </p>
+    <p>
+      A seconda delle scelte effettuate e delle modalità disponibili, Google può mostrare
+      annunci personalizzati, annunci non personalizzati oppure annunci limitati.
+    </p>
+    <p>
+      Gli annunci non personalizzati non vengono selezionati sulla base della tua
+      precedente attività per creare un profilo pubblicitario, ma possono comunque
+      utilizzare informazioni contestuali e, quando consentito, identificativi del
+      dispositivo per funzioni come la limitazione della frequenza degli annunci e la
+      rendicontazione aggregata.
+    </p>
+    <p>
+      Gli annunci limitati applicano ulteriori restrizioni all'uso dei dati e degli
+      identificativi. Alcune informazioni tecniche, come l'indirizzo IP necessario a
+      trasmettere l'annuncio al dispositivo, possono comunque essere trattate.
+    </p>
+    <p>
+      Dove queste opzioni di consenso si applicano, puoi rivedere le tue scelte in
+      qualsiasi momento da <strong>Impostazioni → Pubblicità → Scelte sugli
+      annunci</strong> all'interno di itineride. Una volta che il consenso è stato
+      chiesto, tale voce resta disponibile, anche nella versione premium; dove il
+      consenso non è richiesto non viene mostrata.
+    </p>
+    <p>
+      L'identificativo pubblicitario è inoltre gestito da Android e può essere reimpostato
+      o eliminato attraverso le impostazioni privacy del dispositivo.
+    </p>
+    <p>
+      Per maggiori informazioni su come Google tratta i dati, consulta l'informativa sulla
+      privacy di Google e la pagina dedicata all'utilizzo delle informazioni provenienti
+      da siti e app che utilizzano i suoi servizi.
+    </p>
+
+    <h2>Posizione</h2>
+    <p>
+      itineride può chiedere l'autorizzazione ad accedere alla posizione del dispositivo.
+    </p>
+    <p>
+      La posizione viene utilizzata per:
+    </p>
+    <ul>
+      <li>centrare la mappa sul punto in cui ti trovi;</li>
+      <li>creare percorsi che partono dalla posizione corrente;</li>
+      <li>creare esportazioni che utilizzano la posizione corrente come punto di
+        partenza.</li>
+    </ul>
+    <p>
+      La posizione viene inizialmente utilizzata sul dispositivo.
+    </p>
+    <p>
+      Se chiedi di calcolare un percorso a partire dalla posizione corrente, le relative
+      coordinate vengono inviate a openrouteservice come parte della richiesta.
+    </p>
+    <p>
+      Anche il semplice spostamento della mappa sulla tua posizione comporta il
+      caricamento delle corrispondenti tessere cartografiche da OpenStreetMap; i relativi
+      server possono quindi dedurre l'area di mappa visualizzata, come descritto sopra.
+    </p>
+    <p>
+      Lo sviluppatore di itineride non riceve né conserva la tua posizione sui propri
+      server.
+    </p>
+    <p>
+      Se neghi il permesso di posizione, le altre funzioni dell'app continuano a essere
+      disponibili; non potrai utilizzare soltanto quelle che richiedono la posizione
+      corrente.
+    </p>
+
+    <h2>Minori</h2>
+    <p>
+      itineride non è progettata specificamente come servizio destinato ai minori.
+    </p>
+    <p>
+      Lo sviluppatore non gestisce account utente né conserva sui propri server i dati
+      inseriti nell'app.
+    </p>
+    <p>
+      Nella versione gratuita, la pubblicità è fornita da Google AdMob secondo la
+      configurazione dell'app, le scelte privacy effettuate dall'utente e le condizioni
+      applicabili al servizio.
+    </p>
+
+    <h2>Cancellazione dei dati</h2>
+    <p>
+      I dati gestiti direttamente da itineride sono conservati sul dispositivo e possono
+      essere eliminati senza dover inviare una richiesta allo sviluppatore.
+    </p>
+    <p>
+      Puoi:
+    </p>
+    <ul>
+      <li><strong>disinstallare l'app</strong>, eliminando i dati locali di itineride dal
+        dispositivo;</li>
+      <li>utilizzare <strong>Impostazioni Android → App → itineride → Spazio di
+        archiviazione → Cancella dati</strong> per eliminare i dati locali mantenendo
+        l'app installata;</li>
+      <li>gestire o eliminare l'<strong>identificativo pubblicitario</strong> attraverso
+        le impostazioni privacy di Android.</li>
+    </ul>
+    <p>
+      Se utilizzi il backup di Android, una copia di alcuni dati potrebbe rimanere nel
+      backup associato al tuo account Google ed è gestita direttamente da Google.
+    </p>
+    <p>
+      Lo sblocco della versione premium è inoltre associato al tuo account Google Play e
+      può essere ripristinato dopo una nuova installazione.
+    </p>
+    <p>
+      Per i dati trattati dai servizi esterni descritti in questa informativa si applicano
+      invece le rispettive modalità e i rispettivi periodi di conservazione.
+    </p>
+
+    <h2>Base giuridica</h2>
+    <p>
+      Quando si applica la normativa europea sulla protezione dei dati personali, i
+      trattamenti descritti in questa informativa possono fondarsi, a seconda dei casi,
+      sulle seguenti basi giuridiche:
+    </p>
+    <ul>
+      <li><strong>consenso</strong> — art. 6, par. 1, lett. a) GDPR — per i trattamenti
+        pubblicitari per i quali la normativa richiede il consenso; puoi modificare o
+        revocare le tue scelte in qualsiasi momento da <strong>Impostazioni →
+        Pubblicità → Scelte sugli annunci</strong>;</li>
+      <li><strong>esecuzione del servizio richiesto</strong> — art. 6, par. 1, lett. b)
+        GDPR — quando utilizzi una funzione che richiede, ad esempio, l'invio di
+        coordinate o termini di ricerca a openrouteservice, il caricamento delle tessere
+        di OpenStreetMap o la gestione dell'acquisto tramite Google Play;</li>
+      <li><strong>legittimo interesse</strong> — art. 6, par. 1, lett. f) GDPR — ove
+        applicabile, per esigenze quali sicurezza, prevenzione delle frodi e degli abusi
+        e corretto funzionamento dei servizi.</li>
+    </ul>
+    <p>
+      I servizi esterni indicati in questa informativa possono trattare i dati anche in
+      qualità di titolari autonomi e secondo le basi giuridiche descritte nelle rispettive
+      informative sulla privacy.
+    </p>
+
+    <h2>I tuoi diritti</h2>
+    <p>
+      itineride non utilizza account utente e lo sviluppatore non conserva sui propri
+      server una copia dei viaggi, delle tappe, delle note, dei luoghi preferiti o delle
+      altre informazioni salvate localmente nell'app.
+    </p>
+    <p>
+      Per questo motivo, per molti dei dati utilizzati da itineride non esiste presso lo
+      sviluppatore un archivio personale da consultare, modificare, esportare o
+      cancellare: tali dati possono essere gestiti direttamente sul dispositivo.
+    </p>
+    <p>
+      Quando si applica la normativa europea sulla protezione dei dati personali, restano
+      comunque fermi i diritti previsti dagli articoli da 15 a 22 del GDPR, tra cui, ove
+      applicabili:
+    </p>
+    <ul>
+      <li>accesso;</li>
+      <li>rettifica;</li>
+      <li>cancellazione;</li>
+      <li>limitazione del trattamento;</li>
+      <li>portabilità;</li>
+      <li>opposizione.</li>
+    </ul>
+    <p>
+      Quando il trattamento si basa sul consenso, puoi inoltre revocarlo in qualsiasi
+      momento. La revoca non pregiudica la liceità del trattamento effettuato prima della
+      revoca.
+    </p>
+    <p>
+      Per qualsiasi richiesta relativa ai trattamenti effettuati nell'ambito di itineride
+      puoi scrivere a
+      <strong><a href="mailto:itineride@boschin.it">itineride@boschin.it</a></strong>.
+    </p>
+    <p>
+      Per i dati trattati direttamente dai servizi esterni indicati sopra — compresi
+      openrouteservice, OpenStreetMap e Google — consulta le rispettive informative sulla
+      privacy e, quando necessario, rivolgiti direttamente al relativo fornitore.
+    </p>
+    <p>
+      Hai inoltre il diritto di proporre reclamo a un'autorità di controllo. In Italia
+      l'autorità competente è il <strong>Garante per la protezione dei dati
+      personali</strong>; puoi anche rivolgerti all'autorità competente del Paese in cui
+      vivi o lavori.
+    </p>
+
+    <h2>Modifiche a questa informativa</h2>
+    <p>
+      Ogni modifica a questa informativa sarà pubblicata su questa pagina e accompagnata
+      da una nuova data di aggiornamento.
+    </p>
+    <p>
+      La versione vigente di questa informativa è sempre disponibile in questa pagina, il
+      cui indirizzo è indicato nella scheda dell'app su Google Play. Si raccomanda di
+      consultarla periodicamente.
+    </p>
+
+    <h2>Contatti</h2>
+    <p>
+      <strong>Andrea Boschin</strong><br>
+      <strong><a href="mailto:itineride@boschin.it">itineride@boschin.it</a></strong>
+    </p>
+  </section>
+
+  <footer>
+    itineride — <span lang="it">informativa sulla privacy</span> / privacy policy
+  </footer>
+
+</main>
+</body>
+</html>
